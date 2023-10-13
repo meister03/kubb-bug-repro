@@ -1,0 +1,1 @@
+export const operations = {"getUser":{"path":"/users/:userId","method":"get"}} as const;
