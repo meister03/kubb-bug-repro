@@ -28,6 +28,7 @@ app.use(cors())
 app.listen(PORT, () => {
     // Should be allowed?
     fetch('http://localhost:3000/users/12030').then(async (res)=> {
+        console.log("Error shpuld happen here, try to fetch with allowed path parameter.")
         const data = await res.json();
         console.log("Request", data)
     }).catch((err)=>{
