@@ -1,2 +1,3 @@
-export * from "./getUserSchema.js";
+export * from "./updateUserInfoSchema.js";
+export * from "./userBodySchema.js";
 

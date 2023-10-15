@@ -5,19 +5,36 @@ export const openapi = {
     "version": "1.0.0"
   },
   "paths": {
-    "/users/{userId}": {
-      "get": {
+    "/users/{userId}/info": {
+      "put": {
         "tags": [
           "Users"
         ],
-        "summary": "Get public user details",
+        "summary": "Update User Info",
         "description": "...",
-        "operationId": "getUser",
+        "operationId": "updateUserInfo",
         "parameters": [
           {
             "$ref": "#/components/parameters/userId"
+          },
+          {
+            "$ref": "#/components/parameters/checkid"
+          },
+          {
+            "$ref": "#/components/parameters/urlcheckid"
           }
         ],
+        "requestBody": {
+          "description": "Updated user",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserBody"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -49,12 +66,47 @@ export const openapi = {
     }
   },
   "components": {
+    "schemas": {
+      "UserBody": {
+        "type": "object",
+        "description": "nothing important",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "age": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      }
+    },
     "parameters": {
       "userId": {
         "name": "userId",
         "in": "path",
         "description": "Executes the action in the context of the specified user.",
         "required": true,
+        "schema": {
+          "type": "string",
+          "example": 1234343434343
+        }
+      },
+      "checkid": {
+        "name": "checkid",
+        "in": "query",
+        "description": "Checks something",
+        "schema": {
+          "type": "string",
+          "example": 1234343434343
+        }
+      },
+      "urlcheckid": {
+        "name": "urlcheckid",
+        "in": "query",
+        "description": "Checks something",
         "schema": {
           "type": "string",
           "example": 1234343434343

@@ -1,0 +1,1 @@
+{"type":"object","description":"nothing important","properties":{"id":{"type":"number"},"age":{"type":"number"},"name":{"type":"string"}},"x-readme-ref-name":"UserBody"}

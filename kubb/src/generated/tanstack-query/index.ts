@@ -1,2 +1,2 @@
-export * from "./useGetUser.js";
+export * from "./useUpdateUserInfo.js";
 

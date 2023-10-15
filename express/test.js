@@ -13,7 +13,7 @@ const app = zodiosContext(z.object({
     express: express()
 });
 
-app.get("/users/:userId", (req, res) => {
+app.put("/users/:userId/info", (req, res) => {
     // res.json is typed thanks to zod
     res.json({
         //   auto-complete req.params.id
@@ -27,11 +27,11 @@ app.use(cors())
 
 app.listen(PORT, () => {
     // Should be allowed?
-    fetch('http://localhost:3000/users/12030').then(async (res)=> {
+ /*    fetch('http://localhost:3000/users/12030').then(async (res)=> {
         console.log("Error shpuld happen here, try to fetch with allowed path parameter.")
         const data = await res.json();
         console.log("Request", data)
     }).catch((err)=>{
         console.log(err)
-    })
+    }) */
 })

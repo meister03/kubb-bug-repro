@@ -1,2 +1,3 @@
-export * from "./GetUser.js";
+export * from "./UpdateUserInfo.js";
+export * from "./UserBody.js";
 
