@@ -4,7 +4,7 @@ info:
   version: 1.0.0
 paths:
   /users/{userId}/info:
-    put:
+    get:
       tags:
         - Users
       summary: Update User Info
@@ -14,13 +14,6 @@ paths:
         - $ref: "#/components/parameters/userId"
         - $ref: "#/components/parameters/checkid"
         - $ref: "#/components/parameters/urlcheckid"
-      requestBody:
-            description: Updated user
-            required: true
-            content:
-               application/json:
-                  schema:
-                     $ref: "#/components/schemas/UserBody"
       responses:
         '200':
           description: Successful response
@@ -58,6 +51,7 @@ components:
       required: true
       schema:
         type: string
+        pattern: "[0-9]*"
         example: 1234343434343
     checkid:
       name: checkid

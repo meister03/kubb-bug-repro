@@ -1,10 +1,9 @@
 import { makeApi, Zodios } from "@zodios/core";
-import { updateUserInfoMutationResponseSchema, updateUserInfoPathParamsSchema, updateUserInfoQueryParamsSchema, updateUserInfoMutationRequestSchema } from "./zod/updateUserInfoSchema.js";
+import { updateUserInfoQueryResponseSchema, updateUserInfoPathParamsSchema, updateUserInfoQueryParamsSchema } from "./zod/updateUserInfoSchema.js";
 
-
-      const endpoints = makeApi([
+const endpoints = makeApi([
         {
-          method: "put",
+          method: "get",
           path: "/users/:userId/info",
           description: `...`,
           requestFormat: "json",
@@ -30,30 +29,9 @@ import { updateUserInfoMutationResponseSchema, updateUserInfoPathParamsSchema, u
             type: "Query",
             schema: updateUserInfoQueryParamsSchema.shape['urlcheckid']
           }
-        ,
-          {
-            name: "id",
-            description: ``,
-            type: "Body",
-            schema: updateUserInfoMutationRequestSchema.schema.shape['id']
-          }
-        ,
-          {
-            name: "age",
-            description: ``,
-            type: "Body",
-            schema: updateUserInfoMutationRequestSchema.schema.shape['age']
-          }
-        ,
-          {
-            name: "name",
-            description: ``,
-            type: "Body",
-            schema: updateUserInfoMutationRequestSchema.schema.shape['name']
-          }
         
           ],
-          response: updateUserInfoMutationResponseSchema,
+          response: updateUserInfoQueryResponseSchema,
           errors: [
               
           ],

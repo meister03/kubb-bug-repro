@@ -6,7 +6,7 @@ export const openapi = {
   },
   "paths": {
     "/users/{userId}/info": {
-      "put": {
+      "get": {
         "tags": [
           "Users"
         ],
@@ -24,17 +24,6 @@ export const openapi = {
             "$ref": "#/components/parameters/urlcheckid"
           }
         ],
-        "requestBody": {
-          "description": "Updated user",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserBody"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -91,6 +80,7 @@ export const openapi = {
         "required": true,
         "schema": {
           "type": "string",
+          "pattern": "[0-9]*",
           "example": 1234343434343
         }
       },

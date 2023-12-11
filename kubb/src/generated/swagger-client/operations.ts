@@ -1,1 +1,1 @@
-export const operations = {"updateUserInfo":{"path":"/users/:userId/info","method":"put"}} as const;
+export const operations = {"updateUserInfo":{"path":"/users/:userId/info","method":"get"}} as const;

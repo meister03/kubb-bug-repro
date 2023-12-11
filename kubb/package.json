@@ -26,7 +26,7 @@
 		"@kubb/swagger-tanstack-query": "^1.11.3",
 		"@kubb/swagger-ts": "^1.11.3",
 		"@kubb/swagger-zod": "^1.11.3",
-		"@kubb/swagger-zodios": "^1.11.3",
+		"@kubb/swagger-zodios": "^1.11.5",
 		"typescript": "^5.2.2"
 	}
 }

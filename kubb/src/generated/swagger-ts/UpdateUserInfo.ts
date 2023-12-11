@@ -1,23 +1,3 @@
-import type { UserBody } from "./UserBody.js";
-
-/**
- * @description Successful response
-*/
-export type UpdateUserInfoMutationResponse = {
-    /**
-     * @type string | undefined
-    */
-    message?: string;
-    /**
-     * @type object | undefined
-    */
-    user?: {
-        /**
-         * @type string | undefined
-        */
-        userId?: string;
-    };
-};
 
 export type UpdateUserInfoPathParams = {
     /**
@@ -44,6 +24,20 @@ export type UpdateUserInfoQueryParams = {
 };
 
 /**
- * @description Updated user
+ * @description Successful response
 */
-export type UpdateUserInfoMutationRequest = UserBody;
+export type UpdateUserInfoQueryResponse = {
+    /**
+     * @type string | undefined
+    */
+    message?: string;
+    /**
+     * @type object | undefined
+    */
+    user?: {
+        /**
+         * @type string | undefined
+        */
+        userId?: string;
+    };
+};
